@@ -3,11 +3,11 @@ CPPFLAGS = -g
 AR = arm-linux-gnueabihf-ar
 ARFLAGS = crv
 
-libtest.a : main.o
-	$(AR) $(ARFLAGS) libtest.a *.o
+test_arm_32_c_static_library.a : main.o
+	$(AR) $(ARFLAGS) test_arm_32_c_static_library.a *.o
 
 main.o : main.c
 	$(CC) $(CPPFLAGS) -fPIC -c main.c
 
 clean :
-	rm main.o libtest.a
+	rm main.o test_arm_32_c_static_library.a
